@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary">#72ABFF</color>
+    <color name="colorPrimaryDark">#00136E </color>
+    <color name="colorAccent">#3D54C1</color>
+
+    <color name="textPrimary">#fafafa</color>
+    <color name="textSecondary">#dddddd</color>
+
+    <color name="colorBackground">#72ABFF</color>
+    <color name="colorBackgroundDark">#00136E</color>
+
+    <color name="colorBackgroundGradientStart">#FF72ABFF</color>
+    <color name="colorBackgroundGradientEnd">#AA00136E</color>
+
+    <color name="colorAppBarGradientStart">#AA00136E</color>
+    <color name="colorAppBarGradientEnd">#3300136E</color>
+
+    <color name="colorButton">@color/white_3</color>
+    <color name="colorFab">#EE3d54c1</color>
+
+    <color name="colorSuccess">#008000</color>
+    <color name="colorError">#ff0000</color>
+
+    <color name="transparent">#00000000</color>
+
+    <color name="delete">#ffbb0000</color>
+
+    <color name="black_0">#00000000</color>
+    <color name="black_1">#11000000</color>
+    <color name="black_2">#22000000</color>
+    <color name="black_3">#33000000</color>
+    <color name="black_4">#44000000</color>
+    <color name="black_5">#55000000</color>
+    <color name="black_6">#66000000</color>
+    <color name="black_7">#77000000</color>
+    <color name="black_8">#88000000</color>
+    <color name="black_9">#99000000</color>
+    <color name="black_A">#AA000000</color>
+    <color name="black_B">#BB000000</color>
+    <color name="black_C">#CC000000</color>
+    <color name="black_D">#DD000000</color>
+    <color name="black_E">#EE000000</color>
+    <color name="black_F">#FF000000</color>
+
+    <color name="white_0">#00FFFFFF</color>
+    <color name="white_1">#11FFFFFF</color>
+    <color name="white_2">#22FFFFFF</color>
+    <color name="white_3">#33FFFFFF</color>
+    <color name="white_4">#44FFFFFF</color>
+    <color name="white_5">#55FFFFFF</color>
+    <color name="white_6">#66FFFFFF</color>
+    <color name="white_7">#77FFFFFF</color>
+    <color name="white_8">#88FFFFFF</color>
+    <color name="white_9">#99FFFFFF</color>
+    <color name="white_A">#AAFFFFFF</color>
+    <color name="white_B">#BBFFFFFF</color>
+    <color name="white_C">#CCFFFFFF</color>
+    <color name="white_D">#ddffffff</color>
+    <color name="white_E">#EEFFFFFF</color>
+    <color name="white_F">#FFFFFFFF</color>
+
+    <!-- DIALOG -->
+    <color name="dialogBackground">@color/white_C</color>
+    <color name="dialogTitleColor">@color/black_D</color>
+    <color name="dialogMessageColor">@color/black_E</color>
+    <color name="dialogButtonColor">@color/colorAccent</color>
+    <color name="dialogFieldNormal">@color/black_A</color>
+    <color name="dialogFieldActivated">@color/black_8</color>
+
+    <color name="dialogDarkBackground">@color/black_2</color>
+    <color name="dialogDarkTitleColor">@color/white_C</color>
+    <color name="dialogDarkMessageColor">@color/white_F</color>
+    <color name="dialogDarkButtonColor">@color/white_B</color>
+    <color name="dialogDarkFieldNormal">@color/white_A</color>
+    <color name="dialogDarkFieldActivated">@color/white_8</color>
+
+</resources>

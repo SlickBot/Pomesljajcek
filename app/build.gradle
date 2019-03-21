@@ -1,0 +1,130 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: "kotlin-kapt"
+apply plugin: 'androidx.navigation.safeargs'
+apply plugin: 'io.fabric'
+
+android {
+
+    compileSdkVersion 28
+
+    defaultConfig {
+        applicationId "eu.slicky.pomesljajcek"
+
+        minSdkVersion 21
+        targetSdkVersion 28
+
+        versionCode 5
+        versionName "1.4"
+
+        vectorDrawables.useSupportLibrary = true
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    apply from: "$rootDir/signing.gradle"
+
+    buildTypes {
+        debug {
+            debuggable true
+            applicationIdSuffix '.debug'
+            versionNameSuffix '-DEBUG'
+        }
+        release {
+            useProguard true
+            minifyEnabled true
+            zipAlignEnabled true
+
+            signingConfig signingConfigs.release
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    sourceSets {
+        main.java.srcDirs += 'src/main/kotlin'
+        test.java.srcDirs += 'src/test/kotlin'
+        androidTest.java.srcDirs += 'src/androidTest/kotlin'
+    }
+
+    dataBinding {
+        enabled = true
+    }
+}
+
+dependencies {
+    /* Local dependencies */
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    /* Kotlin */
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation "org.jetbrains.kotlin:kotlin-reflect:$kotlin_version"
+
+    /* Coroutines */
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.1.1"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.1.1"
+
+    /* Android */
+    implementation "androidx.appcompat:appcompat:1.0.2"
+    implementation "androidx.legacy:legacy-support-v4:1.0.0"
+    implementation "androidx.cardview:cardview:1.0.0"
+    implementation "androidx.recyclerview:recyclerview:1.0.0"
+    implementation "androidx.constraintlayout:constraintlayout:2.0.0-alpha3"
+
+    implementation "android.arch.navigation:navigation-fragment:$navigation_version"
+    implementation "android.arch.navigation:navigation-fragment-ktx:$navigation_version"
+    implementation "android.arch.navigation:navigation-ui:$navigation_version"
+    implementation "android.arch.navigation:navigation-ui-ktx:$navigation_version"
+
+    /* Firebase */
+    implementation "com.google.firebase:firebase-core:16.0.8"
+//    implementation "com.google.firebase:firebase-analytics:16.4.0"
+    implementation 'com.crashlytics.sdk.android:crashlytics:2.9.9'
+
+    /* Material */
+    implementation "com.google.android.material:material:1.1.0-alpha04"
+
+    /* Room */
+    implementation "androidx.room:room-runtime:2.1.0-alpha05"
+    kapt "androidx.room:room-compiler:2.1.0-alpha05"
+
+    /* Gson */
+    implementation 'com.google.code.gson:gson:2.8.5'
+
+    /* CSV */
+//    implementation 'com.opencsv:opencsv:3.9'
+
+    /* Picasso */
+    implementation 'com.squareup.picasso:picasso:2.71828'
+
+    /* Animations */
+    // for animating recycler items
+    implementation "jp.wasabeef:recyclerview-animators:3.0.0"
+    // for transition utils
+    implementation "com.andkulikov:transitionseverywhere:1.8.1"
+    // for animation utils
+    implementation "com.daimajia.easing:library:2.1@aar"
+    implementation "com.daimajia.androidanimations:library:2.3@aar"
+
+    /* Custom Views */
+    implementation "com.daimajia.swipelayout:library:1.2.0@aar"
+
+    /* Logging */
+    implementation "com.jakewharton.timber:timber:4.7.1"
+
+    /* Debug */
+//    implementation "com.squareup.leakcanary:leakcanary-android:1.5"
+    implementation "com.facebook.stetho:stetho:1.5.0"
+    implementation "com.facebook.stetho:stetho-okhttp3:1.5.0"
+
+    /* Testing */
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
+}
+
+// To use Parcelize annotation you have to enable experimental Android Extensions
+androidExtensions {
+    experimental = true
+}
+
+apply plugin: 'com.google.gms.google-services'

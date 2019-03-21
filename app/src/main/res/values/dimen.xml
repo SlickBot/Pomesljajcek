@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="status_bar_height">24dp</dimen>
+
+    <dimen name="dialogTitleSize">24sp</dimen>
+    <dimen name="dialogMessageSize">18sp</dimen>
+    <dimen name="dialogButtonSize">16sp</dimen>
+
+</resources>

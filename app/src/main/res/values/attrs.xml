@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="DstInView">
+
+        <attr name="src" format="reference" />
+        <attr name="color" format="color" />
+        <attr name="scale" format="enum">
+            <enum name="fitXY" value="0"/>
+            <enum name="scale" value="1"/>
+        </attr>
+
+    </declare-styleable>
+
+</resources>

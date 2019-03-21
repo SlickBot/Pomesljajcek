@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="eu.slicky.pomesljajcek.ui.activity.main.MainActivity">
+
+    <data>
+        <variable
+            name="fragment"
+            type="eu.slicky.pomesljajcek.ui.activity.main.splash.SplashFragment" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/splash_root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <eu.slicky.pomesljajcek.ui.view.AppTextView
+            android:id="@+id/splash_logo"
+            style="@style/TextAppearance.MaterialComponents.Headline1"
+            android:layout_width="280dp"
+            android:layout_height="280dp"
+            android:background="@drawable/logo_background0"
+            android:fontFamily="@font/sedgwickave_regular"
+
+            android:gravity="center"
+            android:includeFontPadding="false"
+
+            android:shadowColor="@color/black_6"
+            android:shadowDx="5"
+            android:shadowDy="5"
+
+            android:shadowRadius="5"
+            android:text="@string/app_character"
+            android:textSize="120sp"
+            android:transitionName="@string/transition_logo"
+
+            android:visibility="visible"
+            app:fontFamily="@font/sedgwickave_regular"
+            app:layout_constraintBottom_toTopOf="@id/splash_title"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <eu.slicky.pomesljajcek.ui.view.AppTextView
+            android:id="@+id/splash_title"
+            style="@style/TextAppearance.MaterialComponents.Headline3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/sedgwickave_regular"
+
+            android:shadowColor="@color/black_6"
+
+            android:shadowDx="5"
+            android:shadowDy="5"
+            android:shadowRadius="5"
+            android:text="@string/app_name_padded"
+
+            android:textColor="@color/textPrimary"
+            android:textSize="50sp"
+            android:transitionName="@string/transition_title"
+            android:visibility="visible"
+
+            app:fontFamily="@font/sedgwickave_regular"
+            app:layout_constraintBottom_toTopOf="@id/splash_btn_continue"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/splash_logo" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/splash_btn_continue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginStart="48dp"
+            android:layout_marginTop="100dp"
+            android:layout_marginEnd="48dp"
+            android:layout_marginBottom="8dp"
+
+            android:background="@drawable/button_selector"
+            android:fontFamily="@font/roboto_regular"
+            android:paddingStart="48dp"
+
+            android:paddingTop="16dp"
+            android:paddingEnd="48dp"
+            android:paddingBottom="16dp"
+
+            android:shadowColor="@color/black_4"
+            android:shadowDx="4"
+            android:shadowDy="4"
+            android:shadowRadius="3"
+            android:stateListAnimator="@null"
+            android:letterSpacing="0.1"
+            android:text="@string/splash_continue"
+
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="@color/textSecondary"
+            android:textSize="24sp"
+            app:elevation="10dp"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/splash_title" />
+
+
+        <TextView
+            android:id="@+id/splash_tv_version"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:fitsSystemWindows="true"
+            android:layout_margin="8dp"
+
+            android:textColor="@color/textSecondary"
+            android:textSize="12sp"
+            android:fontFamily="@font/roboto_light"
+            android:textAlignment="center"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

@@ -1,0 +1,24 @@
+# IDEA
+*.iml
+/.idea/caches/build_file_checksums.ser
+/.idea/libraries
+/.idea/modules.xml
+/.idea/workspace.xml
+.DS_Store
+.externalNativeBuild
+.editorconfig
+
+# GRADLE
+.gradle
+
+# BUILD
+/build
+/app/build
+/release
+
+# PROJECT
+/signing.gradle
+/local.properties
+/app/keystore
+/detekt
+/capture

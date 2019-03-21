@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_nav_root"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="eu.slicky.pomesljajcek.ui.activity.main.splash.SplashFragment"
+        android:label="SplashFragment" >
+        <action
+            android:id="@+id/action_splashFragment_to_mainFragment"
+            app:destination="@+id/yearFragment"
+            app:popUpTo="@+id/main_nav_root" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/yearFragment"
+        android:name="eu.slicky.pomesljajcek.ui.activity.main.year.YearFragment"
+        android:label="YearFragment" >
+        <action
+            android:id="@+id/action_yearFragment_to_sectionFragment"
+            app:destination="@id/sectionFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/sectionFragment"
+        android:name="eu.slicky.pomesljajcek.ui.activity.main.section.SectionFragment"
+        android:label="SectionFragment" >
+        <argument
+            android:name="year"
+            app:argType="eu.slicky.pomesljajcek.data.db.YearEntity" />
+        <argument
+            android:name="transitionName"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_sectionFragment_to_entryFragment"
+            app:destination="@id/entryFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/entryFragment"
+        android:name="eu.slicky.pomesljajcek.ui.activity.main.entry.EntryFragment"
+        android:label="EntryFragment">
+        <argument
+            android:name="section"
+            app:argType="eu.slicky.pomesljajcek.data.db.SectionEntity" />
+    </fragment>
+
+</navigation>

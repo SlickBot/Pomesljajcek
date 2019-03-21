@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="eu.slicky.pomesljajcek.ui.activity.quiz.QuizActivity">
+
+    <data>
+        <variable
+            name="fragment"
+            type="eu.slicky.pomesljajcek.ui.activity.quiz.QuizQuestionFragment" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/value_text"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="8dp"
+            android:gravity="center"
+
+            android:fontFamily="@font/roboto_light"
+            android:textAlignment="center"
+            android:textColor="@color/white_B"
+            app:autoSizeTextType="uniform"
+            app:autoSizeMaxTextSize="300sp"
+            app:autoSizeMinTextSize="48sp"
+            android:includeFontPadding="false"
+
+            app:layout_constraintBottom_toTopOf="@id/type_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+
+            app:layout_constraintVertical_bias="0.4"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <TextView
+            android:id="@+id/type_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:textSize="26sp"
+            android:textAlignment="center"
+            android:textColor="@color/white_A"
+            android:fontFamily="@font/roboto_light"
+
+            app:layout_constraintTop_toBottomOf="@id/value_text"
+            app:layout_constraintBottom_toTopOf="@id/answer_layout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+
+            app:layout_constraintVertical_chainStyle="packed"
+            />
+
+        <FrameLayout
+            android:id="@+id/answer_layout"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+
+            <TextView
+                android:id="@+id/show_answer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+
+                android:text="@string/quiz_show_answer"
+                android:textSize="18sp"
+                android:textAlignment="center"
+                android:textColor="@color/white_C"
+                android:fontFamily="@font/roboto_light"
+                />
+
+            <TextView
+                android:id="@+id/answer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:visibility="gone"
+
+                android:textSize="36sp"
+                android:textAlignment="center"
+                android:textColor="@color/white_C"
+                android:fontFamily="@font/roboto_light"
+                />
+
+        </FrameLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

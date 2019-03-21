@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/quiz_nav_root"
+    app:startDestination="@id/normalQuizFragment">
+
+    <fragment
+        android:id="@+id/normalQuizFragment"
+        android:name="eu.slicky.pomesljajcek.ui.activity.quiz.QuizFragment"
+        android:label="NormalQuizFragment" />
+
+</navigation>

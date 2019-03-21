@@ -1,0 +1,61 @@
+buildscript {
+    ext {
+        gradle_version = '3.3.2'
+        kotlin_version = '1.3.21'
+
+        lifecycle_version = '1.1.1'
+        navigation_version = '1.0.0'
+        data_binding_version = gradle_version
+    }
+    repositories {
+        google()
+        maven { url "https://plugins.gradle.org/m2/" }
+        maven { url 'https://maven.fabric.io/public' }
+        jcenter()
+    }
+    dependencies {
+        classpath "com.android.tools.build:gradle:$gradle_version"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath "com.google.gms:google-services:4.2.0"
+        classpath "io.fabric.tools:gradle:1.27.1"
+        classpath "android.arch.navigation:navigation-safe-args-gradle-plugin:$navigation_version"
+    }
+}
+
+plugins {
+    id("io.gitlab.arturbosch.detekt").version("1.0.0-RC12")
+}
+
+//apply plugin: 'io.gitlab.arturbosch.detekt'
+
+detekt {
+    project("app") {
+        input = files("$projectDir/src/main/java")
+        config = files("$project.rootDir/detekt/config.yml")
+//        baseline = file("$projectDir/build/reports/baseline.xml")
+
+        reports {
+            xml {
+                enabled = true
+                destination = file("$projectDir/build/reports/detekt-result.xml")
+            }
+            html {
+                enabled = true
+                destination = file("$projectDir/build/reports/detekt-result.html")
+            }
+        }
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        maven { url "https://jitpack.io" }
+        // NOTE: jcenter() should be ALWAYS added LAST -> google "A CONFUSING DEPENDENCY"
+        jcenter()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

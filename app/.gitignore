@@ -1,0 +1,7 @@
+# BUILD
+/build
+/release
+
+# PROJECT
+keystore.jks
+google-services.json

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.daimajia.swipe.SwipeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/swipe_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    android:layout_margin="4dp"
+
+    app:leftEdgeSwipeOffset="0dp"
+    app:rightEdgeSwipeOffset="0dp"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/swipe_left_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#66FF5534">
+
+        <Button
+            android:id="@+id/delete_button"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginStart="26dp"
+            android:layout_marginEnd="26dp"
+
+            android:text="@string/delete"
+            android:textAlignment="center"
+            android:textColor="@color/white_C"
+            android:backgroundTint="@color/delete"
+
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/swipe_right_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="2"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:id="@+id/edit_button"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+
+            android:clickable="true"
+            android:focusable="true"
+
+            android:background="@color/white_5"
+            >
+
+            <eu.slicky.pomesljajcek.ui.view.AppImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+
+                android:clickable="false"
+                android:focusable="false"
+
+                android:background="@drawable/ic_edit"
+                android:backgroundTint="@color/white_D"
+                />
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/swipe_main_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorButton"
+        >
+
+        <eu.slicky.pomesljajcek.ui.view.AppTextView
+            android:id="@+id/simplified"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+
+            android:textColor="@color/textSecondary"
+            android:textSize="12sp"
+            android:textAlignment="center"
+            app:fontFamily="@font/roboto_regular"
+
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/character"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
+        <eu.slicky.pomesljajcek.ui.view.AppTextView
+            android:id="@+id/character"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+
+            android:includeFontPadding="false"
+            android:textColor="@color/textPrimary"
+            android:textSize="40sp"
+            android:textAlignment="center"
+            app:fontFamily="@font/sedgwickave_regular"
+
+            app:layout_constraintTop_toBottomOf="@id/simplified"
+            app:layout_constraintBottom_toTopOf="@id/pinyin"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
+        <eu.slicky.pomesljajcek.ui.view.AppTextView
+            android:id="@+id/pinyin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+
+            android:textColor="@color/textPrimary"
+            android:textSize="20sp"
+            android:textAlignment="center"
+            app:fontFamily="@font/roboto_light"
+
+            app:layout_constraintTop_toBottomOf="@id/character"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.daimajia.swipe.SwipeLayout>

@@ -1,0 +1,68 @@
+<!DOCTYPE resources [<!ENTITY appname "Pomešljajček">]>
+
+<resources>
+    <!--<string name="app_name">&appname;</string>-->
+    <!--<string name="app_name_padded">&#160;&#160;&appname;&#160;&#160;</string>-->
+    <!--<string name="app_character">拌</string>-->
+
+    <string name="ok">OK</string>
+    <string name="yes">Da</string>
+    <string name="no">Ne</string>
+    <string name="cancel">Prekliči</string>
+    <string name="save">Shrani</string>
+    <string name="edit">Uredi</string>
+
+    <!--<string name="fuck_yeah">FUCK YEAH!</string>-->
+    <string name="splash_continue">Naprej</string>
+    <string name="has_traditional">IMA TRADICIONALEN ZNAK</string>
+
+    <!--<string name="transition_logo">transition_logo</string>-->
+    <!--<string name="transition_title">transition_title</string>-->
+    <!--<string name="transition_year_title">transition_year_title</string>-->
+    <!--<string name="transition_entry_title">transition_entry_title</string>-->
+
+    <string name="delete">Izbriši</string>
+    <string name="delete_item">Izbriši element?</string>
+
+    <string name="add_year_title">Dodaj letnik</string>
+    <string name="edit_year_title">Uredi letnik</string>
+    <string name="delete_year_title">Izbriši letnik</string>
+    <string name="delete_year_message">Ali res želiš izbrisati \"%1$s\"?</string>
+
+    <string name="add_section_title">Dodaj lekcijo</string>
+    <string name="edit_section_title">Uredi lekcijo</string>
+    <string name="delete_section_title">Izbriši lekcijo</string>
+    <string name="delete_section_message">Ali res želiš izbrisati \"%1$s\"?</string>
+
+    <string name="add_entry_title">Dodaj vnos</string>
+    <string name="edit_entry_title">Uredi vnos</string>
+    <string name="delete_entry_title">Izbriši vnos</string>
+    <string name="delete_entry_message">Ali res želiš izbrisati \"%1$s\"?</string>
+
+    <!--<string name="year_number">Letnik %1$d</string>-->
+    <string name="year_name_label">Ime letnika:</string>
+
+    <!--<string name="section_number">Lekcija %1$d</string>-->
+    <string name="section_name_label">Ime lekcije:</string>
+
+    <string name="entry_pinyin_label">Pinyin:</string>
+    <string name="entry_character_label">Znak:</string>
+    <string name="entry_has_traditional">Ima tradicionalni znak</string>
+    <!--<string name="entry_has_traditional_label">Ima tradicionalen znak:</string>-->
+
+    <string name="challenge_dialog_title">Izberi lekcije</string>
+
+    <string name="quiz_show_answer">Pokaži odgovor?</string>
+    <string name="quiz_congratulations">Čestitke!</string>
+    <string name="quiz_result_text">Ponucal/a si %1$d odgovor/a/e/ov</string>
+
+    <string name="background_image_desc">Ozadje</string>
+    <string name="back_button_desc">Pojdi nazaj</string>
+    <string name="add_button_desc">Dodaj</string>
+    <string name="dialog_pp_title">Pravilnik o zasebnosti</string>
+    <string name="dialog_pp_message">S klikom na \"Se strinjam\" se upošteva, da ste prebrali in se strinjate s <a href="https://sites.google.com/view/pomesljajcek/pp">pravilnikom o zasebnosti</a>.</string>
+    <string name="accept">Se strinjam</string>
+    <string name="splash_version">Verzija %1$s</string>
+    <string name="cd_delete">Zbriši</string>
+
+</resources>
